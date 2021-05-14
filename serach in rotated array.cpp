@@ -11,7 +11,7 @@ int searchrotated(int a[],int low,int high,int key)
 		if(a[low]<=a[mid]) //check left half array is sorted or not
 		{
 			if(key>=a[low] && key<=a[mid])
-			return searchrotated(a,0,mid-1,key);
+			return searchrotated(a,low,mid-1,key);
 			
 			return searchrotated(a,mid+1,high,key);
 		}
