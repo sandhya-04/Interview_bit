@@ -14,21 +14,14 @@ int main()
 		for(int i=0;i<n;i++)
 		cin>>songs[i];
 		sort(songs.begin(),songs.end());
-		int start=0;
-		int end=n-1;
-		while(start<end){
-			if(songs[start]+songs[end]==60)
+		unordered_map<int,int>m1;
+		for(int i=0;i<n;i++)
+		{
+			
+			if(m1.find(60-songs[i])!=m1.end())
 			{
-				cout<<"["<<start<<","<<end<<"]"<<endl;
-				
+			     cout<<"["<<m1[60 - songs[i]]<<","<<m1[s]<<"]"<<endl;	
 			}
-			
-			if(songs[start]+songs[end]<30)
-			start++;
-			else
-			end--;
-			
 		}
-		cout<<"-1"<<endl;
 	}
 }
